@@ -3,13 +3,14 @@ using namespace std;
 int lenOfLongSubarr(int arr[],int n,int k)
 {
 
+//     map to store the loccatio of sum
     unordered_map<int, int> um;
     int sum = 0, maxLen = 0;
     int startIndex = 0, endIndex = 0;
 
     for (int i = 0; i < n; i++)
     {
-
+// adding elememt to sum
         sum += arr[i];
 
         if (sum == k)
@@ -34,11 +35,14 @@ int lenOfLongSubarr(int arr[],int n,int k)
         }
     }
 
+  try{
     for (int i = startIndex; i <= endIndex; i++)
     {
         cout << arr[i] << " ";
     }
     cout << endl;
+  }catch(){
+  }
 
     return maxLen;
 }
