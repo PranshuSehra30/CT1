@@ -2,8 +2,10 @@
 using namespace std;
 int main()
 {
-
-    int n;
+ // try catch block  to handle errors
+    try {
+  
+     int n;
     cin >> n;
     int arr[n];
     for (auto &it : arr)
@@ -27,6 +29,14 @@ int main()
         }
         m[sum].push_back(i);
     }
+        
+        
+        
+    }
+    catch () {
+ 
+    }
+   
 
     return 0;
 }
